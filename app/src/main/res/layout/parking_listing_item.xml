@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/order_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dimen_12"
+        app:cardElevation="@dimen/dimen_12"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimen_8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/orange_round_border_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/faded_orangefill_round_border_8bg"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:layout_marginHorizontal="@dimen/dimen14">
+
+                    <TextView
+                        android:id="@+id/parkingName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Parking Name"
+                        android:textSize="@dimen/dimen16"
+                        android:layout_marginVertical="@dimen/dimen10"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen10">
+                <RelativeLayout
+                    android:id="@+id/slotRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen5">
+                    <TextView
+                        android:id="@+id/slotsLeftTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="15 Slots Available"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/dimen14"
+                        android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/priceTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="₹ 50.00/hr"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dimen14"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/addressLabelRL"
+                    android:layout_below="@id/slotRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Address:"
+                        android:textSize="@dimen/dimen14"/>
+                    <ImageView
+                        android:id="@+id/locIV"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="@dimen/dimen5"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_loc"
+                        app:tint="@color/colorPrimary"/>
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/parkingAddressTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_regular"
+                    android:layout_below="@id/addressLabelRL"
+                    android:text="Technopark, Trivandrum, Kerala"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
